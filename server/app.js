@@ -14,7 +14,7 @@ app.get('/', (req, res) => res.status(200).send({
   message: 'Welcome to our first Route!!!'
 }));
 
-app.use((req, res) => {
+app.use((req, res, next) => {
   const err = res.status(404).send({
     ERrOR: '404 Page Not Found!'
   })
